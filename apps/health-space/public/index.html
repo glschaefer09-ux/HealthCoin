@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Space — HealthCoin Community</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- HIPAA Banner -->
+  <div id="hipaa-banner" class="hipaa-banner">
+    <span>
+      <strong>HealthCoin is a community rewards protocol.</strong>
+      It is not a healthcare provider, does not store medical records, and is not HIPAA-covered.
+      Never share protected health information on this platform.
+    </span>
+    <button onclick="dismissHipaa()">Got it</button>
+  </div>
+
+  <!-- Sidebar Nav -->
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="logo">⚕ Health Space</div>
+      <nav>
+        <a href="#" class="nav-link active" data-page="feed">🏠 Feed</a>
+        <a href="#" class="nav-link" data-page="journal">📓 Wellness Journal</a>
+        <a href="#" class="nav-link" data-page="remedies">🌿 Home Remedies</a>
+        <a href="#" class="nav-link" data-page="providers">🏥 Providers</a>
+        <a href="#" class="nav-link" data-page="messages">💬 Messages</a>
+        <a href="#" class="nav-link" data-page="ambassador">⭐ Ambassador</a>
+        <a href="#" class="nav-link" data-page="profile">👤 Profile</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a href="http://localhost:3001/dapp" target="_blank" class="btn-accent">Launch dApp ↗</a>
+        <p class="disclaimer-small">HealthCoin is not a substitute for health insurance.</p>
+        <p class="disclaimer-small muted">Telemedicine — <em>Coming Soon</em></p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Pages injected by JS -->
+    </main>
+  </div>
+
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="modal-overlay" style="display:none">
+    <div class="modal">
+      <h2 id="auth-title">Sign In</h2>
+      <form id="auth-form">
+        <div id="register-fields" style="display:none">
+          <input type="text" id="auth-username" placeholder="Username" />
+        </div>
+        <input type="email" id="auth-email" placeholder="Email" required />
+        <input type="password" id="auth-password" placeholder="Password" required />
+        <div id="register-role" style="display:none">
+          <select id="auth-role">
+            <option value="patient">Patient</option>
+            <option value="provider">Provider / Clinic</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%">Continue</button>
+      </form>
+      <p style="text-align:center;margin-top:16px">
+        <a href="#" id="auth-toggle">Don't have an account? Register</a>
+      </p>
+      <button class="modal-close" onclick="closeAuthModal()">✕</button>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

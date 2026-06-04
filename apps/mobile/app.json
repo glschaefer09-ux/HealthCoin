@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "HealthCoin",
+    "slug": "healthcoin",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": { "resizeMode": "contain", "backgroundColor": "#0a1628" },
+    "scheme": "healthcoin",
+    "plugins": [
+      "expo-router",
+      ["expo-camera", { "cameraPermission": "Allow HealthCoin to access camera for QR scanning." }],
+      "react-native-nfc-manager"
+    ],
+    "ios": {
+      "bundleIdentifier": "app.healthcoin.wallet",
+      "infoPlist": {
+        "NFCReaderUsageDescription": "HealthCoin uses NFC to process tap-to-pay at clinic POS terminals."
+      }
+    },
+    "android": {
+      "package": "app.healthcoin.wallet",
+      "permissions": ["NFC", "CAMERA", "VIBRATE"]
+    }
+  }
+}

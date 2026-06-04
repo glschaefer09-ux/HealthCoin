@@ -1,0 +1,26 @@
+{
+  "name": "healthcoin-wallet",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "health-space": "cd apps/health-space && node server.js",
+    "dapp": "cd apps/web && npm run dev"
+  },
+  "devDependencies": {
+    "turbo": "^1.13.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
